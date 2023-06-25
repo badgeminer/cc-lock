@@ -264,6 +264,7 @@ function RegisterWindow:screen2Continue()
         self.window.setBackgroundColor(colors.black)
         self.window.setTextColor(colors.red)
         self.window.write("Incorrect TOTP      ")
+        self.window.write(self.totp.now(self.input.otpInstance)
     else
         self.window.setBackgroundColor(colors.black)
         self.window.setTextColor(colors.green)
