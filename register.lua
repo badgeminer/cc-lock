@@ -250,7 +250,7 @@ function RegisterWindow:screen2Continue()
         return
     end
 
-    local now = math.floor(os.epoch("utc") / 1000)
+    local now = math.floor(os.epoch("utc") / 1000)-9
     if #(self.screen2.validationCode.input) < 6 then
         self.window.setCursorPos(self.marginX, 9)
         self.window.setBackgroundColor(colors.black)
