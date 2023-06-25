@@ -6,7 +6,7 @@ Computer craft lock is a simple lua program that add two factors authentication 
 
 To install the program, you can use the following command in your computer:
 
-```wget run https://raw.githubusercontent.com/ascpial/cc-lock/main/cc-lock/installer.lua```
+```wget run https://raw.githubusercontent.com/badgeminer/cc-lock/main/cc-lock/installer.lua```
 
 To register your account, go to your root folder (`cd /`) and run the following command:
 
