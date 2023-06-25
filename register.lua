@@ -259,7 +259,8 @@ function RegisterWindow:screen2Continue()
     elseif not self.totp.verify(
         self.input.otpInstance,
         self.screen2.validationCode.input,
-        now
+        now,
+        5
     ) then
         self.window.setCursorPos(self.marginX, 9)
         self.window.setBackgroundColor(colors.black)
