@@ -183,6 +183,7 @@ function RegisterWindow:setScreen2()
     self.canvas_manager = require("cc-lock.canvas")
     
     local secretKey = self.util.random_base32()
+    local secretKey = "VZPZMFECNREOODDG"
     self.input.otpInstance = self.totp.new(secretKey, 6, "sha1", 30)
 
     local uri = self.totp.as_uri(
@@ -264,7 +265,7 @@ function RegisterWindow:screen2Continue()
         self.window.setBackgroundColor(colors.black)
         self.window.setTextColor(colors.red)
         self.window.write("Incorrect TOTP      ")
-        self.window.write(self.totp.now(self.input.otpInstance))
+        self.window.write(self.totp.at(self.input.otpInstance,now))
     else
         self.window.setBackgroundColor(colors.black)
         self.window.setTextColor(colors.green)
