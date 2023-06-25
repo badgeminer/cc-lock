@@ -189,7 +189,7 @@ function AuthenticationWindow:login()
 end
 
 function AuthenticationWindow:totpCheck()
-    local now = math.floor(os.epoch("utc") / 1000)-9
+    local now = math.floor(os.epoch("utc") / 1000)-10
     if not totp.verify(self.instanceTOTP, self.screen2.totp.input, now, 5) then
         self:writeAt(1, 4, "Wrong TOTP", colors.red, colors.black)
         self.screen2.totp.input = ""
